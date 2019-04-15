@@ -1,12 +1,18 @@
 <?import javafx.scene.layout.GridPane?>
 
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.Button?>
 <GridPane fx:controller="sample.Controller"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
-    <Label text="Welcome to JavaFX!" textFill="green">
-        <font>
-            <Font name="Roboto Slab bold" size="70"/>
-        </font>
-    </Label>
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10"
+          gridLinesVisible="true">
+    <!--<columnConstraints>-->
+        <!--<ColumnConstraints percentWidth="50.0"/>-->
+        <!--<ColumnConstraints percentWidth="50.0"/>-->
+    <!--</columnConstraints>-->
+
+    <Button text="Buttun One " GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+    <Button text="Buttun Two" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+    <Button text="Buttun Three" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+    <Button text="Buttun Long Buton Four" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+    <Button text="Buttun Five" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+
 </GridPane>
