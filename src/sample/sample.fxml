@@ -1,88 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<?import javafx.collections.FXCollections?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.*?>
 <?import javafx.collections.*?>
 <?import java.lang.String?>
 
-<?import javafx.scene.control.ChoiceBox?>
-<?import javafx.scene.control.Slider?>
-<?import javafx.scene.control.Spinner?>
-<?import javafx.scene.control.ColorPicker?>
-<?import javafx.scene.control.DatePicker?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TitledPane?>
-<?import javafx.scene.control.Accordion?>
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="103.0"
-          prefWidth="233.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1"
-          xmlns:fx="http://javafx.com/fxml/1">
-    <columnConstraints>
-        <ColumnConstraints hgrow="SOMETIMES" maxWidth="207.0" minWidth="10.0" prefWidth="84.0"/>
-    </columnConstraints>
-    <rowConstraints>
-        <RowConstraints maxHeight="29.0" minHeight="10.0" prefHeight="16.0" vgrow="SOMETIMES"/>
-        <RowConstraints maxHeight="38.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES"/>
-    </rowConstraints>
-    <TextField GridPane.rowIndex="1" GridPane.columnIndex="0"/>
-    <PasswordField GridPane.rowIndex="2" GridPane.columnIndex="0"/>
-    <ComboBox GridPane.rowIndex="3" GridPane.columnIndex="0" GridPane.columnSpan="2" editable="true">
-        <items>
-            <FXCollections fx:factory="observableArrayList">
-                <String fx:value="This is Option 1 This is Option 1 This is Option 1"/>
-                <String fx:value="This is Option 1Option 2"/>
-                <String fx:value="This is Option 1Option 3"/>
-                <String fx:value="This is Option 1Option 4"/>
-                <String fx:value="This is Option 1Option 5"/>
-                <String fx:value="This is Option 1Option 6"/>
-            </FXCollections>
-        </items>
-        <value>
-            <String fx:value="This is Option 1"/>
-        </value>
-    </ComboBox>
-    <ChoiceBox GridPane.rowIndex="5" GridPane.columnIndex="0">
-        <items>
-            <FXCollections fx:factory="observableArrayList">
-                <String fx:value="cb 1"/>
-                <String fx:value="cb 1"/>
-                <String fx:value="cb 1"/>
-                <String fx:value="cb 1"/>
-                <String fx:value="cb 1"/>
-                <String fx:value="cb 1"/>
-                <String fx:value="cb 1"/>
-                <String fx:value="cb 1"/>
-                <String fx:value="cb 1"/>
-            </FXCollections>
-        </items>
-    </ChoiceBox>
-
-    <Slider GridPane.rowIndex="6" GridPane.columnIndex="0" GridPane.columnSpan="4"
-            min="0" max="100" showTickLabels="true" showTickMarks="true" minorTickCount="4"
-    snapToTicks="true" />
-
-    <Spinner GridPane.rowIndex="7" GridPane.columnIndex="0"
-             min="0" max="100" editable="true" initialValue="50"/>
-    <ColorPicker GridPane.rowIndex="8" GridPane.columnIndex="0"/>
-    <DatePicker GridPane.rowIndex="9" GridPane.columnIndex="0"/>
-
-
-    <Accordion GridPane.rowIndex="10" GridPane.columnIndex="0" GridPane.columnSpan="2" expandedPane="$open">
-        <panes>
-            <TitledPane fx:id="open" text="Titled Pane"  >
-                <Label text="jadj;ad;v;ad;"/>
-            </TitledPane>
-            <TitledPane text="Titled Pane"  >
-                <Label text="jadj;ad;v;ad;"/>
-            </TitledPane>
-            <TitledPane text="Titled Pane"  >
-                <Label text="jadj;ad;v;ad;"/>
-            </TitledPane>
-            <TitledPane text="Titled Pane"  >
-                <Label text="jadj;ad;v;ad;"/>
-            </TitledPane>
-        </panes>
-    </Accordion>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<GridPane fx:controller="sample.Controller"
+          stylesheets="@style.css" xmlns:fx="http://javafx.com/fxml"
+          alignment="CENTER" hgap="10" vgap="10">
+    <TextField fx:id="nameField" GridPane.rowIndex="0" GridPane.columnIndex="0"
+               onKeyReleased="#handleKeyReleased"/>
+    <Button fx:id="helloButton" text="Say Hello" GridPane.rowIndex="1" GridPane.columnIndex="0"
+            onAction="#onButtonClick"/>
+    <Button fx:id="byeButton" text="Say Bye" GridPane.rowIndex="2" GridPane.columnIndex="0"
+            onAction="#onButtonClick"/>
 </GridPane>
