@@ -9,6 +9,10 @@
 <?import java.lang.String?>
 
 <?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.DatePicker?>
 <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="103.0"
           prefWidth="233.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1"
           xmlns:fx="http://javafx.com/fxml/1">
@@ -51,4 +55,13 @@
             </FXCollections>
         </items>
     </ChoiceBox>
+
+    <Slider GridPane.rowIndex="6" GridPane.columnIndex="0" GridPane.columnSpan="4"
+            min="0" max="100" showTickLabels="true" showTickMarks="true" minorTickCount="4"
+    snapToTicks="true" />
+
+    <Spinner GridPane.rowIndex="7" GridPane.columnIndex="0"
+             min="0" max="100" editable="true" initialValue="50"/>
+    <ColorPicker GridPane.rowIndex="8" GridPane.columnIndex="0"/>
+    <DatePicker GridPane.rowIndex="9" GridPane.columnIndex="0"/>
 </GridPane>
